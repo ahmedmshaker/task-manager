@@ -1,0 +1,368 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Task Manager APIs",
+		"_postman_id": "12f8c47c-0310-d87c-6df9-db62bf4ffa8a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"description": "",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"url": "http://localhost:3000/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\":\"ahmed shaker\",\n\"email\":\"ahmed@gmail.com\",\n\"age\":28,\n\"password\":\"ahmed@12345\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"url": "http://localhost:3000/users/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"ahmed@gmail.com\",\n\t\"password\":\"ahmed@12345\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"url": "http://localhost:3000/users/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwODAyODk0OWU3YjNkNzhjYjY5YmQiLCJpYXQiOjE2NTc4MzI2ODV9.s-sevZc-23bmAfUcnSJISyibxFydj0SB1JNLUgCWWAg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "logout from all the devices",
+					"request": {
+						"url": "http://localhost:3000/users/logoutAll",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwODAyODk0OWU3YjNkNzhjYjY5YmQiLCJpYXQiOjE2NTc4MzQ0ODZ9.Dk1_yxG5PAcOQnYc9REcSqMhasWt0-geCKsMyOgVb4I",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get User Profile",
+					"request": {
+						"url": "http://localhost:3000/users/me",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"url": "http://localhost:3000/users/me",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwODAyODk0OWU3YjNkNzhjYjY5YmQiLCJpYXQiOjE2NTc4MzYzNjl9.hptr60iAnR2WdxvuKSP9DeqR5wiWyZ6LRR9BV1ptSng",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Shikabala\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Profile",
+					"request": {
+						"url": "http://localhost:3000/users/me",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwODAyODk0OWU3YjNkNzhjYjY5YmQiLCJpYXQiOjE2NTc4MzYzNjl9.hptr60iAnR2WdxvuKSP9DeqR5wiWyZ6LRR9BV1ptSng",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Upload User profile Image",
+					"request": {
+						"url": "http://localhost:3000/users/me/avatar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							},
+							{
+								"key": "",
+								"value": "",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"value": "",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile Image",
+					"request": {
+						"url": "http://localhost:3000/users/62d09754c359f0199f405dbe/avatar",
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Profile Image",
+					"request": {
+						"url": "http://localhost:3000/users/me/avatar",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"description": "",
+			"item": [
+				{
+					"name": "Create User Task",
+					"request": {
+						"url": "http://localhost:3000/tasks",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"task1\",\n\t\"description\":\"ahmed description shaker\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Tasks",
+					"request": {
+						"url": {
+							"raw": "http://localhost:3000/tasks?completed=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "completed",
+									"value": "true",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"task1\",\n\t\"description\":\"ahmed description shaker\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Task",
+					"request": {
+						"url": "http://localhost:3000/tasks/62d0a518768c546b55c6a148",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\":\"Test Updating the Tasks\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Task",
+					"request": {
+						"url": "http://localhost:3000/tasks/62d0a518768c546b55c6a148",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Task By Id",
+					"request": {
+						"url": "http://localhost:3000/tasks/62d0a518768c546b55c6a148",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQwOTc1NGMzNTlmMDE5OWY0MDVkYmUiLCJpYXQiOjE2NTc4Mzc0MDB9.XXpBcZw1RuOTB1jOKSjYtIBe8QVM3qwPcf3VmVnMdFE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"task1\",\n\t\"description\":\"ahmed description shaker\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
