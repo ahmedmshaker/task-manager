@@ -2,7 +2,7 @@
 this app contains 15 APIs and divided two sections 
 Users APIs
 User Tasks APIs
-for the APIs check [Task Manager APIs.postman_collection(Task-Manager-APIs.postman_collection.json)
+for the APIs check [Task Manager APIs.postman_collection](task-manager-apis.postman_collection.json)
 
 ![Screenshot](images/apis.png)
 
