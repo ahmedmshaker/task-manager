@@ -1,7 +1,8 @@
 ## Task Manager Node js App
-this app contains 15 APIs and divided two sections 
-Users APIs
-User Tasks APIs
+this app contains 15 APIs and it's divided to two sections 
+</br>
+<li>Users APIs</li>
+<li>User Tasks APIs</li>
 for the APIs check [Task Manager APIs.postman_collection](task-manager-apis.postman_collection.json)
 
 ![Screenshot](images/apis.png)
