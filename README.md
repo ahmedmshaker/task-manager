@@ -2,9 +2,9 @@
 this app contains 15 APIs and divided two sections 
 Users APIs
 User Tasks APIs
-for the APIs check [Task Manager APIs.postman_collection(task-manager/Task-Manager-APIs.postman_collection.json)
+for the APIs check [Task Manager APIs.postman_collection(Task-Manager-APIs.postman_collection.json)
 
-![Screenshot](/task-manager/images/apis.png)
+![Screenshot](images/apis.png)
 
 
 ## if you want to run the app using docker you can use
@@ -12,9 +12,9 @@ i generated two container for [mongodb , current app]
  ```bash
  docker compose up
  ```
- check [docker-compose.yml](/task-manager/docker-compose.yml)
+ check [docker-compose.yml](docker-compose.yml)
 
- 
+
 ## dependencies
 [express](https://www.npmjs.com/package/express)
 [mongoose](https://www.npmjs.com/package/mongoose)
