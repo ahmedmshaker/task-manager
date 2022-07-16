@@ -9,11 +9,11 @@ for the APIs check [Task Manager APIs.postman_collection](task-manager-apis.post
 
 
 ## if you want to run the app using docker you can use
-i generated two container for [mongodb , current app]
+generated two container for [mongodb , current app] and combined them using docker compose check [docker-compose.yml](docker-compose.yml)
  ```bash
  docker compose up
  ```
- check [docker-compose.yml](docker-compose.yml)
+
 
 
 ## dependencies
